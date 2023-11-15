@@ -38,7 +38,7 @@ dependencies {
 	implementation 'mysql:mysql-connector-java:8.0.29'
 	// JSP 의존성 주입
 	implementation 'javax.servlet:jstl'
-	implementation "org.apache.tomcat.embed:tomcat-embed-jasper"
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 }
 
 tasks.named('bootBuildImage') {
