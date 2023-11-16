@@ -1,3 +1,8 @@
+logging:
+  level:
+    root: warn
+    com.example: info
+    org.hibernate.type.descriptor.sql: trace
 server:
   port: 8080
 spring:
@@ -13,8 +18,9 @@ spring:
       prefix: /WEB-INF/views/
       suffix: .jsp
   jpa:
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: org.hibernate.dialect.MySQL57Dialect
     hibernate:
+      # create(new table), update(add new column), none(nothing)
       ddl-auto: update
     properties:
       hibernate:
