@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,14 +27,19 @@ public class User {
     private String name;
     @Column(name = "phone_num")
     private String phoneNum;
-    private int password;
+    private String password;
+    private String written;
 
     @Builder
-    public User(Long id, String email, String name, String phoneNum, int password) {
+    public User(Long id, String email, String name, String phoneNum, String password) {
         this.id = id;
         this.email = email;
         this.name = name;
         this.phoneNum = phoneNum;
         this.password = password;
+    }
+
+    public void encodeStudentPassword(PasswordEncoder passwordEncoder){
+        this.password = passwordEncoder.encode(password);
     }
 }
