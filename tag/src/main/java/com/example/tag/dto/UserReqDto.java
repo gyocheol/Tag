@@ -7,6 +7,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserReqDto {
 
-    private String email;
+    private String phoneNum;
     private String password;
 }
