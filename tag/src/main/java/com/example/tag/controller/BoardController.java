@@ -41,6 +41,12 @@ public class BoardController {
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
+    /**
+     * 게시글 조회
+     * @param model
+     * @param pageable
+     * @return
+     */
     @GetMapping
     public String boardAllList(Model model, @PageableDefault(page = 0, size = 20) Pageable pageable) {
         Page<BoardAllResDto> boardList = boardService.getAllBoard(pageable);
