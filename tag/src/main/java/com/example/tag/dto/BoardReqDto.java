@@ -21,9 +21,9 @@ public class BoardReqDto {
     @Size(min = 11, max = 11, message = "최대 11자리까지 입력하세요")
     @Pattern(regexp = "^[0-9]{11}$", message = "숫자만 11자리 써주세요")
     private String phoneNum;
-    @NotBlank
+    
     @Size(min = 4, max = 4)
-    private String password;
+    private String password;        // 비밀번호가 없다면 모두가 조회 가능
     @NotBlank
     private String title;
     @NotBlank

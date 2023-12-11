@@ -80,7 +80,7 @@ public class BoardServiceImpl implements BoardService{
 
     @Override
     public Page<BoardAllResDto> getAllBoard(Pageable pageable) {
-        Page<Board> board = boardRepository.findAll(pageable);
+        Page<Board> board = boardRepository.findAllByOrderByCreatedDateDesc(pageable);
         return new PageImpl<>(
                 board.stream().map(BoardAllResDto::new).collect(Collectors.toList()),
                 pageable,
