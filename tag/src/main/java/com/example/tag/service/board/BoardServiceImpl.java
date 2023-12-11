@@ -1,12 +1,14 @@
 package com.example.tag.service.board;
 
 import com.example.tag.dto.BoardAllResDto;
+import com.example.tag.dto.BoardDetailResDto;
 import com.example.tag.dto.BoardReqDto;
 import com.example.tag.dto.BoardUpdateReqDto;
 import com.example.tag.dto.UserReqDto;
 import com.example.tag.entity.Board;
 import com.example.tag.entity.User;
 import com.example.tag.repository.BoardRepository;
+import com.example.tag.repository.CommentRepository;
 import com.example.tag.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -27,6 +29,7 @@ public class BoardServiceImpl implements BoardService{
 
     private final BoardRepository boardRepository;
     private final UserRepository userRepository;
+    private final CommentRepository commentRepository;
 
     @Transactional
     @Override
@@ -85,6 +88,19 @@ public class BoardServiceImpl implements BoardService{
                 board.stream().map(BoardAllResDto::new).collect(Collectors.toList()),
                 pageable,
                 board.getTotalPages());
+    }
+
+    @Override
+    public BoardDetailResDto getDetailBoard(Long boardId, UserReqDto dto) {
+        Board board = validationBoard(boardId);
+        validationUser(dto.getPhoneNum(), dto.getPassword(), board);
+        return BoardDetailResDto.builder()
+                .name(board.getUser().getName())
+                .title(board.getTitle())
+                .content(board.getContent())
+                .createDate(board.getCreatedDate())
+                .comments(commentRepository.findByBoardId(board.getId()))
+                .build();
     }
 
     /**

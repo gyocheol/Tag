@@ -1,6 +1,7 @@
 package com.example.tag.service.board;
 
 import com.example.tag.dto.BoardAllResDto;
+import com.example.tag.dto.BoardDetailResDto;
 import com.example.tag.dto.BoardUpdateReqDto;
 import com.example.tag.dto.BoardReqDto;
 import com.example.tag.dto.UserReqDto;
@@ -34,4 +35,12 @@ public interface BoardService {
      * @return
      */
     Page<BoardAllResDto> getAllBoard(Pageable pageable);
+
+    /**
+     * 게시글 디테일 조회
+     * @param boardId
+     * @param dto
+     * @return
+     */
+    BoardDetailResDto getDetailBoard(Long boardId, UserReqDto dto);
 }
