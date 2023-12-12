@@ -5,6 +5,7 @@ import com.example.tag.dto.BoardDetailResDto;
 import com.example.tag.dto.BoardUpdateReqDto;
 import com.example.tag.dto.BoardReqDto;
 import com.example.tag.dto.UserReqDto;
+import com.example.tag.entity.Board;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -43,4 +44,11 @@ public interface BoardService {
      * @return
      */
     BoardDetailResDto getDetailBoard(Long boardId, UserReqDto dto);
+
+    /**
+     * 게시판 유무 유효성 검사
+     * @param boardId
+     * @return
+     */
+    Board validationBoard(Long boardId);
 }

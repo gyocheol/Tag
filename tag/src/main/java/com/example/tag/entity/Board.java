@@ -30,8 +30,6 @@ public class Board {
     private Long id;
     @ManyToOne
     private User user;
-    @OneToMany(mappedBy = "board", fetch = FetchType.EAGER)
-    private List<Comment> comment;
     @Column(nullable = false)
     private String title;
     @Column(length = 1023, nullable = false)
