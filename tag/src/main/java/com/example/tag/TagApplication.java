@@ -12,7 +12,7 @@ import java.util.TimeZone;
 public class TagApplication {
 
 	public static void main(String[] args) {
-		System.setProperty("spring.config.name", "application,application-db,application-login,application-aws");
+		System.setProperty("spring.config.name", "application,application-db,application-login,application-aws,application-map");
 		SpringApplication.run(TagApplication.class, args);
 	}
 

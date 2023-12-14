@@ -8,5 +8,7 @@
 </head>
 <body>
 <h1>표구</h1>
+
+<P> <a href="/map">찾아오시는 길</a></P>
 </body>
 </html>

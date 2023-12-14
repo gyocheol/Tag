@@ -17,6 +17,7 @@ spring:
       - db
       - login
       - aws
+      - map
   # JSP ViewResolver
   mvc:
     view:
