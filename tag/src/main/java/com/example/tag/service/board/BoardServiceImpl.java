@@ -99,7 +99,7 @@ public class BoardServiceImpl implements BoardService{
                 .title(board.getTitle())
                 .content(board.getContent())
                 .createDate(board.getCreatedDate())
-                .comments(commentRepository.findByBoardId(board.getId()))
+                .comments(commentRepository.findByBoardId(boardId))
                 .build();
     }
 
@@ -108,7 +108,7 @@ public class BoardServiceImpl implements BoardService{
      * @param boardId
      * @return Board
      */
-    private Board validationBoard(Long boardId) {
+    public Board validationBoard(Long boardId) {
         return boardRepository.findById(boardId)
                 .orElseThrow(() -> new IllegalStateException("게시판이 없습니다."));
     }

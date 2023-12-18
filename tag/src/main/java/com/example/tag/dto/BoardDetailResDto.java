@@ -1,6 +1,5 @@
 package com.example.tag.dto;
 
-import com.example.tag.entity.Board;
 import com.example.tag.entity.Comment;
 import lombok.Builder;
 import lombok.Getter;

@@ -134,7 +134,6 @@
                 <th scope="col">제목</th>
                 <th scope="col">작성자</th>
                 <th scope="col">작성일</th>
-                <th scope="col">댓글 수</th>
             </tr>
             </thead>
             <tbody>
@@ -144,7 +143,6 @@
                     <td>${board.title}</td>
                     <td>${board.name}</td>
                     <td>${board.createdDate}</td>
-                    <td>${board.commentCnt}</td>
                 </tr>
             </c:forEach>
             </tbody>
