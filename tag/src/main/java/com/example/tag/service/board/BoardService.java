@@ -18,7 +18,7 @@ public interface BoardService {
     void createBoard(BoardReqDto dto);
 
     /**
-     * 자신이 쓴 글만 삭제 - 댓글 완성 후 댓글과 대댓글 모두 같이 삭제
+     * 자신이 쓴 글만 삭제 - 댓글 완성 후 댓글 모두 같이 삭제
      * @param dto
      */
     void deleteBoard(UserReqDto dto, Long boardId);

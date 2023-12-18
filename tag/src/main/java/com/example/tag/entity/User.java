@@ -25,13 +25,11 @@ public class User {
     private String name;
     @Column(name = "phone_num")
     private String phoneNum;
-    private String written;
 
     @Builder
-    public User(Long id, String email, String name, String phoneNum, String password, String written) {
+    public User(Long id, String name, String phoneNum) {
         this.id = id;
         this.name = name;
         this.phoneNum = phoneNum;
-        this.written = written;
     }
 }

@@ -42,19 +42,11 @@ public class BoardServiceImpl implements BoardService{
                 .password(dto.getPassword())
                 .createdDate(LocalDateTime.now())
                 .build();
-        // board 의 id가 필요하기 때문에 먼저 한번 저장 이 코드 때문에 느려지면 삭제 예정
-        boardRepository.save(board);
-        // 유저가 있다면 작성 글 id 업데이트
-        if (user.isPresent()) {
-            user.get().setWritten(user.get().getWritten() + "," + board.getId().toString());
-            board.setUser(user.get());
-        }
-        // 유저가 없다면 저장
-        else {
+        // 유저가 없다면 유저 생성
+        if (user.isEmpty()) {
             User newUser = User.builder()
                     .name(dto.getName())
                     .phoneNum(dto.getPhoneNum())
-                    .written(board.getId().toString())
                     .build();
             userRepository.save(newUser);
             board.setUser(newUser);
@@ -65,13 +57,15 @@ public class BoardServiceImpl implements BoardService{
         log.info("[게시판에 글 작성 완료]");
     }
 
+    @Transactional
     @Override
     public void deleteBoard(UserReqDto dto, Long boardId) {
         Board board = validationBoard(boardId);
         validationUser(dto.getPhoneNum(), dto.getPassword(), board);
-
+        // 댓글 모두 삭제
+        commentRepository.deleteAllByBoardId(boardId);
+        // 게시글 삭제
         boardRepository.delete(board);
-
     }
 
     @Override
@@ -79,6 +73,7 @@ public class BoardServiceImpl implements BoardService{
         Board board = validationBoard(boardId);
         validationUser(userDto.getPhoneNum(), userDto.getPassword(), board);
         board.updateBoard(updateDto.getTitle(), updateDto.getContent());
+        boardRepository.save(board);
     }
 
     @Override

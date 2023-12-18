@@ -3,6 +3,7 @@ package com.example.tag.controller;
 import com.example.tag.dto.BoardAllResDto;
 import com.example.tag.dto.BoardDetailResDto;
 import com.example.tag.dto.BoardReqDto;
+import com.example.tag.dto.BoardUpdateReqTwoDto;
 import com.example.tag.dto.UserReqDto;
 import com.example.tag.service.board.BoardService;
 import lombok.RequiredArgsConstructor;
@@ -11,12 +12,15 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -65,5 +69,29 @@ public class BoardController {
     @GetMapping("/{boardId}")
     public ResponseEntity<BoardDetailResDto> getDetailBoard(@PathVariable Long boardId, @Valid @RequestBody UserReqDto dto) {
         return ResponseEntity.ok(boardService.getDetailBoard(boardId, dto));
+    }
+
+    /**
+     * 자신이 작성한 게시글 수정
+     * @param boardId
+     * @param dto
+     * @return
+     */
+    @PutMapping("/{boardId}")
+    public ResponseEntity<HttpStatus> updateBoard(@PathVariable Long boardId, @Valid @RequestBody BoardUpdateReqTwoDto dto) {
+        boardService.updateBoard(dto.getUserDto(), dto.getUpdateDto(), boardId);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    /**
+     * 자신이 작성한 게시글 삭제
+     * @param boardId
+     * @param dto
+     * @return
+     */
+    @DeleteMapping("/{boardId}")
+    public ResponseEntity<HttpStatus> deleteBoard(@PathVariable Long boardId, @Valid @RequestBody UserReqDto dto) {
+        boardService.deleteBoard(dto, boardId);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 }
