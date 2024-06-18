@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -11,17 +12,17 @@ import javax.persistence.Id;
 @Getter
 @Builder
 @NoArgsConstructor
-public class User {
-
+public class Menu {
     @Id
     private Long id;
-    private String username;
-    private String password;
+    private String menu;
+    @Column(name = "sub_menu")
+    private String subMenu;
 
     @Builder
-    public User(Long id, String username, String password) {
+    public Menu(Long id, String menu, String subMenu) {
         this.id = id;
-        this.username = username;
-        this.password = password;
+        this.menu = menu;
+        this.subMenu = subMenu;
     }
 }

@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82f44f59-7461-4e48-b87c-e139755a00ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/dto/LoginReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/dto/SignUpReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/entity/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/src/main/java/com/example/tag/TagApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/TagApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/src/test/java/com/example/tag/TagApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tag/src/test/java/com/tag/TagApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/src/main/java/com/tag/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +39,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -71,7 +74,8 @@
     "last_opened_file_path": "C:/Program Files (x86)/MySQL/Connector NET 8.0",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RunManager" selected="Application.com.tag.TagApplication">
