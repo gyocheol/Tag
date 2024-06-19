@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82f44f59-7461-4e48-b87c-e139755a00ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/dto/LoginReqDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/dto/SignUpReqDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/entity/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/service/JwtTokenAuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/src/main/java/com/tag/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,23 +56,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TagApplication.executor": "Run",
-    "Gradle.Build tag.executor": "Run",
-    "Gradle.tag [:TagApplication.main()].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feat/setting",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Program Files (x86)/MySQL/Connector NET 8.0",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TagApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build tag.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.tag [:TagApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/setting&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/MySQL/Connector NET 8.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.com.tag.TagApplication">
     <configuration name="TagApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.tag.TagApplication" />
