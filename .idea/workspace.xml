@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82f44f59-7461-4e48-b87c-e139755a00ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/service/JwtTokenAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/api/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/config/JwtAuthenticationToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/config/JwtRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/config/JwtUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/src/main/java/com/tag/TagApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/TagApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/src/main/java/com/tag/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/src/main/java/com/tag/service/JwtTokenAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +30,12 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tag" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -66,7 +77,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;feat/setting&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/MySQL/Connector NET 8.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/82103/OneDrive/바탕 화면/Tag&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,

@@ -1,6 +1,5 @@
 package com.tag.config;
 
-import com.tag.service.JwtTokenAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +16,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 @RequiredArgsConstructor
 public class SecurityConfig{
 
-    private final JwtTokenAuthenticationFilter jwtTokenAuthenticationFilter;
+    private final JwtRequestFilter jwtRequestFilter;
 
     /**
      * Security 기본 설정
@@ -37,7 +36,7 @@ public class SecurityConfig{
                 .authorizeRequests()
                 .anyRequest().permitAll()  // 현재는 모든 request 요청 혀용 TODO: 추후 권한 별 허용 예정
                 .and()
-                .addFilterBefore(jwtTokenAuthenticationFilter, BasicAuthenticationFilter.class);
+                .addFilterBefore(jwtRequestFilter, BasicAuthenticationFilter.class);
         return http.build();
     }
 
