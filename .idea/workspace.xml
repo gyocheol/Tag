@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82f44f59-7461-4e48-b87c-e139755a00ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/tag/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/tag/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/src/main/java/com/example/tag/TagApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tag/src/main/java/com/example/tag/TagApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/api/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/config/JwtAuthenticationToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/config/JwtRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/config/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/src/main/java/com/tag/TagApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/TagApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/src/main/java/com/tag/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tag/src/main/java/com/tag/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/src/main/java/com/tag/service/JwtTokenAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +30,25 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tag" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,25 +56,35 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2hjvBdkgu4ObHc4dFuH9yZ8DNLc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.tag [:TagApplication.main()].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/82103/OneDrive/바탕 화면/ico"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TagApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build tag.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.tag [:TagApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/setting&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/82103/OneDrive/바탕 화면/Tag&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.com.tag.TagApplication">
     <configuration name="TagApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.tag.TagApplication" />
       <module name="tag.main" />
@@ -68,8 +98,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.tag.TagApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tag.TagApplication" />
+      <module name="tag.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tag.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.tag.TagApplication" />
         <item itemvalue="Application.TagApplication" />
       </list>
     </recent_temporary>
